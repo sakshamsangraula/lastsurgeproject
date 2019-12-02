@@ -1,13 +1,33 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Switch, Route} from 'react-router-dom';
 import HomePage from './pages/homepage/homepage.component';
 
-function App(){
+const ReturnPage = () => (
+  <div>
+<h1>RETURN PAGE</h1>
 
-return <div> 
-  <HomePage/>
+  </div>
+)
+
+const RentPage = () => (
+  <div>
+<h1>RENT PAGE</h1>
+
+  </div>
+)
+
+
+function App(){
+return(
+ <div> 
+<Switch>
+<Route exact path='/' component={HomePage} />
+ <Route path='/return' component={ReturnPage} />
+ <Route path='/rent' component={RentPage} />
+</Switch>
 </div>
+);
 }
  
 

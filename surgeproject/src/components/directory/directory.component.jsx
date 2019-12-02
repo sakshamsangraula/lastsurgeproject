@@ -12,13 +12,15 @@ constructor(){
                 title: 'RETURN A CAR',
                 imageUrl: 'http://pngimg.com/uploads/mercedes/mercedes_PNG80219.png',
                 size: 'large',
-                id: 1
+                id: 1,
+                linkUrl: 'return'
             },
             {
                 title: 'RENT A CAR',
                 imageUrl: 'http://pngimg.com/uploads/audi/audi_PNG1742.png',
                 size: 'large',
-                id: 2
+                id: 2,
+                linkUrl: 'rent'
             }
         ]
     }
@@ -27,8 +29,8 @@ render(){
     return(
         <div className  = 'directory-menu'>
                 {
-                    this.state.sections.map(({title, imageUrl, id, size}) => (
-                        <MenuItem key ={id}  title = {title} imageUrl = {imageUrl} size = {size}/>
+                    this.state.sections.map(({title, imageUrl, id, size, linkUrl}) => (
+                        <MenuItem key ={id}  title = {title} imageUrl = {imageUrl} size = {size} linkUrl = {linkUrl}/>
                     ))}
 
 
